@@ -9,6 +9,9 @@
 - **Chat Metadata**: Access detailed information about each chat
 - **Rate Limiting**: Protect API from abuse with configurable rate limiting
 
+## Did not Complete:
+- **File Attachments**
+
 
 
 ## 1. Setup Instructions
