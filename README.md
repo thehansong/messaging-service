@@ -21,7 +21,7 @@
 Ensure you have the following installed:
 - Node.js
 - npm
-- Docker (optional, for containerized deployment)
+- Docker
 
 ### Docker Setup
 #### Build the Docker Image
