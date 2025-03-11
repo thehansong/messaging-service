@@ -40,3 +40,69 @@ chmod +x TEST_API.sh
 ./TEST_API.sh
 ```
 
+## 2. API Documentation
+
+**Base URL:** 
+```sh
+http://localhost:5000
+```
+
+### Messages API
+
+| Endpoint                          | Method  | Description                       | Request Body                                        | Response                      |
+|-----------------------------------|--------|-----------------------------------|----------------------------------------------------|------------------------------|
+| `/messages`                       | POST   | Send a new message               | `{ "sender": "user1", "recipient": "user2", "content": "Hello!" }` | Message object               |
+| `/messages/user/:userId`          | GET    | Get all messages for a user      | `-`                                                | Array of message objects     |
+| `/messages/chat/:chatId`          | GET    | Get all messages in a chat       | `-`                                                | Array of message objects     |
+| `/messages/:messageId/status`     | PATCH  | Update message status            | `{ "status": "read" }`                              | Updated message object       |
+
+### Chats API
+
+| Endpoint                      | Method  | Description                  | Request Body | Response                               |
+|--------------------------------|--------|------------------------------|--------------|----------------------------------------|
+| `/chats/user/:userId`         | GET    | Get all chats for a user     | `-`          | Array of chat objects with metadata  |
+| `/chats/:chatId`              | GET    | Get chat metadata            | `-`          | Chat metadata object                 |
+
+---
+
+## Response Objects
+
+### **Message Object**
+```json
+{
+  "id": "string",
+  "sender": "string",
+  "recipient": "string",
+  "content": "string",
+  "status": "delivered" OR "read" OR "failed", (depends on message status)
+  "timestamp": "Date"
+}
+```
+
+### **Chat Metadata Object**
+```json
+{
+  "id": "string",
+  "participants": ["string", "string"],
+  "messageCount": "number",
+  "createdAt": "Date",
+  "lastActivity": "Date",
+  "unreadCount": "number",
+  "participantStats": [
+    {
+      "userId": "string",
+      "messagesSent": "number",
+      "messagesReceived": "number"
+    }
+  ]
+}
+```
+
+### **Chat Object**
+```json
+{
+  "id": "string",
+  "participants": ["string", "string"],
+  "messages": ["string"]
+}
+```
