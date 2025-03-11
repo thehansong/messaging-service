@@ -1,4 +1,4 @@
-# Toku Messaging Service Assessment
+# Messaging Service Assessment
 
 ## Features I've Completed!:
 - **Messaging**: Send messages between users
