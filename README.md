@@ -9,6 +9,8 @@
 - **Chat Metadata**: Access detailed information about each chat
 - **Rate Limiting**: Protect API from abuse with configurable rate limiting
 
+
+
 ## 1. Setup Instructions
 
 ### Prerequisites
@@ -39,6 +41,8 @@ chmod +x TEST_API.sh
 ```sh
 ./TEST_API.sh
 ```
+
+
 
 ## 2. API Documentation
 
@@ -106,3 +110,25 @@ http://localhost:5000
   "messages": ["string"]
 }
 ```
+
+
+## 3. Technical Choices and System Architecture
+### Tech Stack
+- TypeScript  
+- Express.js  
+
+I chose TypeScript because I'm familiar with it, and its built-in type safety helps reduce potential bugs compared to JavaScript. :)
+
+For the backend, Express.js was used because of its lightweight nature and suitability for handling REST APIs in this project scope.  
+
+Since this is a relatively simple prototype, I went with in-memory storage for now—it keeps things fast and straightforward. In a production environment, this would likely be swapped for a proper database.  
+
+I also implemented rate limiting, ensuring that requests are throttled appropriately.  
+
+### System Architecture  
+This is a stateless REST API, meaning each request is handled independently without storing session data.  
+The chat system follows a one-on-one messaging model.  
+
+
+
+
