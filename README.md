@@ -19,9 +19,24 @@ Ensure you have the following installed:
 - Docker (optional, for containerized deployment)
 
 ### Docker Setup
+#### Build the Docker Image
 ```sh
-# Build the Docker image
 docker build -t messaging-service .
-
-# Run the container
+```
+#### Run the container
+```sh
 docker run -p 5000:5000 messaging-service
+```
+
+### Testing the API
+I have created and generated nine simple test cases for this assessment with the assistance of ChatGPT.
+The easiest way to test all features is to use the included test script:
+#### Execute Test Script
+```sh
+chmod +x TEST_API.sh
+```
+#### Run the Test Script
+```sh
+./TEST_API.sh
+```
+
