@@ -131,4 +131,19 @@ The chat system follows a one-on-one messaging model.
 
 
 
+## 4. Potential Improvements  
+- File attachments
+- WebSocket for instant messaging
+- Better storage system
+
+Right now, the system covers the basics of messaging, but there are a few areas that could make it more practical and scalable, especially in a real-world setting like Toku’s operations.  
+
+File attachments would be a big improvement. The current system only supports text messages, but in many business scenarios, users need to send PDFs, images, or other documents. For a company like Toku, this could be useful for internal communication or client interactions—whether it's sharing invoices, contracts, or important files within a conversation. That's a situation I think would be crucial to have.
+
+Another major improvement would be switching from API-based polling to WebSockets for real-time messaging. Right now, messages are retrieved via API calls, which isn’t the best for responsiveness. In a high-volume environment, this could lead to unnecessary server load or slight delays. Implementing WebSockets would allow instant message delivery and a much smoother experience, whether for customer support chats, internal messaging, or transactional notifications. 
+
+A better storage system like maybe persistent storage is also something I did consider but did not implement due to time constraint. Since this prototype currently uses in-memory storage, messages disappear when the service restarts. For a scalable solution at Toku, moving to a proper database like PostgreSQL or MongoDB would ensure conversations and message history are stored securely and reliably, making the system practical & better for long-term use.
+
+
+
 
