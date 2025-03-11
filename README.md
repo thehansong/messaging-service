@@ -1,6 +1,6 @@
 # Messaging Service Assessment
 
-## Features I've Completed!:
+## Features I've Completed:
 - **Messaging**: Send messages between users
 - **Chat Management**: Create and view chats between users
 - **Message Status**: Track message delivery status (delivered, read, and failed)
@@ -124,7 +124,7 @@ I chose TypeScript because I'm familiar with it, and its built-in type safety he
 
 For the backend, Express.js was used because of its lightweight nature and suitability for handling REST APIs in this project scope.  
 
-Since this is a relatively simple prototype, I went with in-memory storage for now—it keeps things fast and straightforward. In a production environment, this would likely be swapped for a proper database.  
+Since this is a relatively simple prototype, I went with in-memory storage for now as it keeps things fast and straightforward. In a production environment, this would likely be swapped for a proper database.  
 
 I also implemented rate limiting, ensuring that requests are throttled appropriately.  
 
